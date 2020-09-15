@@ -5,7 +5,10 @@ function App() {
 
   useEffect(()=>{
     const getRepos = async ()=>{
-
+      const urlAll = 'https://jsonplaceholder.typicode.com/users/';
+      const resp = await fetch(urlAll);
+      const body = await resp.json();
+      console.log(body);
     };
 
     getRepos();
